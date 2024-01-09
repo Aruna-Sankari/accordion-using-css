@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Accordion using Transition </title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:lavender;
+}
+.container{
+border:none;
+max-width:600px;
+background-color:white;
+}
+a{
+text-decoration:none;
+}
+.content{
+overflow:hidden;
+max-height:0px;
+transition:max-height 0.5s ease;
+}
+.content:target{
+max-height:150px;
+}
+.content p{
+padding:15px;
+font-size:17px;
+}
+.title{
+display:block;
+color:black;
+padding:10px;
+background-color:pink;
+border:1px solid black;
+font-size:19px;
+font-family:cambria;
+transition:background-color 0.5s;
+}
+.title:hover{
+background-color:rosybrown;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div>
+<a href="#tab1" class="title">HTML</a>
+<div id="tab1" class="content">
+<p>HTML, is a HyperText Markup Language, it is a dominant markup language for creating websites and anything that can be viewed in a web browser.</p>
+</div>
+</div>
+<div>
+<a href="#tab2" class="title">CSS</a>
+<div id="tab2" class="content">
+<p>CSS is used to design a HTML Webpage using Inline,Internal and External Styles.CSS describes how HTML elements should be displayed.</p>
+</div>
+</div>
+<div>
+<a href="#tab3" class="title">JS</a>
+<div id="tab3" class="content">
+<p>Javascript is a lightweight,interpreted programming language .It turns static HTML webpages into interactive web pages.</p>
+</div>
+</div>
+</div>
+</body>
+</html>
